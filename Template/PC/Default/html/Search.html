@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>站内搜索 - {keyicms:SiteTitle}</title>
+<meta name="keywords" content="{keyicms:Keywords}" />
+<meta name="description" content="{keyicms:Descriptions}" />
+{keyicms:Include File=Css.html}
+{keyicms:Include File=JavaScript.html}
+</head>
+
+<body>
+{keyicms:Include File=Top.html}
+<div class="main_div3">
+	<div class="main">
+    	<div class="left">
+        	<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">站内搜索</div>
+                </div>
+                <div class="cont">
+					<div class='article'>
+                        <ul class='list'>
+                            {keyicms:Search Num=20 PageFlag=True}
+                            <li>[{Search:Column}] <a href="{Search:Link}" title="{Search:Title}">{Search:Title}</a> <span>{Search:AddTime Format=14}</span></li>
+                            {/keyicms:Search}
+                        </ul>
+                    </div>
+                    {keyicms:Include File=Page.html}
+                </div>
+            </div>
+        </div>
+        <div class="right">
+			<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">新闻分类</div>
+                </div>
+                <div class="cont">
+                    <ul class="sort">
+                    {keyicms:Sort SortType=About}
+                    <li><a href="{Sort:Link}">{Sort:SortName}</a></li>	
+                    {/keyicms:Sort}
+                    </ul>
+                </div>
+            </div>
+            {keyicms:Include File=news_Left.html}
+        </div>
+    </div>
+</div>
+
+{keyicms:Include File=End.html}
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{keyicms:SeoTitle} - {keyicms:SiteTitle}</title>
+<meta name="keywords" content="{keyicms:SeoKeywords}" />
+<meta name="description" content="{keyicms:SeoDescription}" />
+{keyicms:Include File=Css.html}
+{keyicms:Include File=JavaScript.html}
+</head>
+
+<body>
+{keyicms:Include File=Top.html}
+<div class="main_div3">
+	<div class="main">
+    	<div class="left">
+            <div class="box aboutUs">
+                <div class="bar">
+                    <div class="tit tit03">关于我们</div>
+                </div>
+                <div class="contUs">
+                    {keyicms:Ads SortPath=0,2,}<img src="{Ads:AdsPic}" title="{Ads:AdsName}" />{/keyicms:Ads}
+                    {keyicms:About ID=1}{About:Content}{/keyicms:About}
+                </div>
+            </div>
+                
+            <div class="box linkUs">
+                <div class="bar">
+                    <div class="tit tit03">合作伙伴</div>
+                </div>
+                <div class="contUs img">
+                    {keyicms:FriendLink LinkType=-1}
+                    <a href='{FriendLink:LinkUrl}' title="{FriendLink:LinkName}：{FriendLink:Remark}" target='_blank'><img src='{FriendLink:LinkFace}' /></a>
+                    {/keyicms:FriendLink}
+                </div>
+                <div class="contUs txt">
+                    {keyicms:FriendLink LinkType=0}
+                    <a href='{FriendLink:LinkUrl}' title="{FriendLink:LinkName}：{FriendLink:Remark}" target='_blank'>{FriendLink:LinkFace}</a>
+                    {/keyicms:FriendLink}
+                </div>
+            </div>
+        </div>
+        <div class="right">
+			<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">相关类别</div>
+                </div>
+                <ul class="sort">
+				{keyicms:Sort SortType=About}
+                <li><a href="{Sort:Link}">{Sort:SortName}</a></li>
+				{/keyicms:Sort}
+                </ul>
+            </div>
+            {keyicms:Include File=news_Left.html}
+        </div>
+    </div>
+</div>
+
+{keyicms:Include File=End.html}
+</body>
+</html>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Recordset1" value="name:ID;datatype:Long,name:NewsName;datatype:VarChar,name:ViewFlag;datatype:Bit,name:SortID;datatype:Long,name:SortPath;datatype:VarChar,name:NoticeFlag;datatype:Bit,name:MobileFlag;datatype:Bit,name:Origin;datatype:VarChar,name:Content;datatype:VarChar,name:ClickNumber;datatype:Long,name:AddTime;datatype:DateTime,name:UpdateTime;datatype:DateTime,name:SeoKeywords;datatype:VarChar,name:SeoDescription;datatype:VarChar,name:Text;datatype:VarChar,name:bold;datatype:VarChar,name:color;datatype:VarChar,name:PicFlag;datatype:Bit,name:SmallPic;datatype:VarChar,name:ClassSeo;datatype:VarChar" />
+</info>

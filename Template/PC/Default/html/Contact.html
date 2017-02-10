@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>联系我们 - {keyicms:SiteTitle}</title>
+<meta name="keywords" content="{keyicms:Keywords}" />
+<meta name="description" content="{keyicms:Descriptions}" />
+{keyicms:Include File=Css.html}
+{keyicms:Include File=JavaScript.html}
+</head>
+
+<body>
+{keyicms:Include File=Top.html}
+<div class="main_div3">
+    <div class="main">
+        <div class="left">
+            <div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">联系我们</div>
+                </div>
+                <div class="cont">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+                <tr>
+                <td width="216" valign="top" style="background:url({keyicms:TemplatePath}/image/bg-line.gif) repeat-y right top;"><img src="{keyicms:TemplatePath}/image/us.jpg" width="200" height="260" /></td>
+                <td valign="top" style="padding-left:16px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><table width="100%" height="257" border="1" cellpadding="8" cellspacing="0" bordercolor="#EDEDED" style="border-collapse:collapse">
+                          <tr>
+                            <td bgcolor="#EDEDED" style="font-weight: bold; color: #EC0000" align="center">{keyicms:ComName}</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;联 系 人：{keyicms:Contacts}</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;联系电话：{keyicms:Telephone}</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;联系手机：{keyicms:Mobile}</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;传真号码：{keyicms:Fax}</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;公司邮箱：{keyicms:Email}</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;公司地址：{keyicms:Address}</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                </table>
+                
+                <div style="width:auto; height:330px; border:#ccc solid 1px; margin:8px 0 0px;" id="allmap"></div>
+                
+				<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak={keyicms:AK}"></script>
+                <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+                <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+				<script type="text/javascript">
+                    var map = new BMap.Map('allmap');
+                    var poi = new BMap.Point({keyicms:MapX},{keyicms:MapY});
+                    map.centerAndZoom(poi, {keyicms:MapLevel});
+                    map.enableScrollWheelZoom();
+                
+					var content = '<img src="{keyicms:MapLogo}" style="height:100px; margin-left:5px; float:right;"/>' +
+						   '<div style="line-height:20px;">' +
+						   '联 系 人：{keyicms:Contacts}<br/>' +
+						   '联系电话：{keyicms:Telephone}<br/>' + 
+						   '联系手机：{keyicms:Mobile}<br/>' + 
+						   '联系地址：{keyicms:Address}<br/>' + 
+						   '</div>'
+
+                    var searchInfoWindow = null;
+                    searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+                            title  : "{keyicms:ComName}",
+                            width  : 290,
+                            panel  : "panel",
+                            enableAutoPan : true,
+                            searchTypes   :[
+                                BMAPLIB_TAB_SEARCH,
+                                BMAPLIB_TAB_TO_HERE,
+                                BMAPLIB_TAB_FROM_HERE
+                            ]
+                        });
+                    var marker = new BMap.Marker(poi);
+                    marker.enableDragging();
+                    marker.addEventListener("click", function(e){
+                        searchInfoWindow.open(marker);
+                    })
+                    map.addOverlay(marker);
+                </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+			<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">关于我们</div>
+                </div>
+                <ul class="sort">
+				{keyicms:Sort SortType=About}
+                <li><a href="{Sort:Link}">{Sort:SortName}</a></li>
+				{/keyicms:Sort}
+                </ul>
+            </div>
+            {keyicms:Include File=news_Left.html}
+        </div>
+    </div>
+</div>
+
+{keyicms:Include File=End.html}
+</body>
+</html>

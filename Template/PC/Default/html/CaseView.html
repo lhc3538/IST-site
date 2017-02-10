@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{keyicms:SeoTitle} - {keyicms:SiteTitle}</title>
+<meta name="keywords" content="{keyicms:SeoKeywords}" />
+<meta name="description" content="{keyicms:SeoDescription}" />
+{keyicms:Include File=Css.html}
+<link rel="stylesheet" type="text/css" href="{keyicms:TemplatePath}/css/jquery.lightbox.css" media="screen" />
+{keyicms:Include File=JavaScript.html}
+<script type="text/javascript" src="{keyicms:TemplatePath}/js/jquery.lightbox.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#gallery a').lightBox();
+    });
+    </script>
+</head>
+
+<body>
+{keyicms:Include File=Top.html}
+<div class="main_div3">
+	<div class="main">
+    	<div class="left">
+        	<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">案例详细</div>
+                </div>
+                <div class="cont">
+                	<div class="article">
+                        <div class="artName">{keyicms:CaseName}</div>
+                        <div class="artInfo_2" id="gallery">
+                            <a href="{keyicms:SmallPic}"><img src="{keyicms:SmallPic}" class="artPic" alt="{keyicms:CaseName}"/></a>
+                            <div class="artJJ">
+                            	<li>添加时间：{keyicms:AddTime}</li>
+                                <li>浏览次数：<script language="javascript" src="/Asp/Number.Asp?id={keyicms:ID}&LX=Keyicms_Case"></script>
+											<script language="javascript" src="/Asp/Number.Asp?id={keyicms:ID}&action=count&LX=Keyicms_Case"></script></li>
+                                <li>
+                                	{keyicms:OtherPic}
+                                    <a href="{OtherPic:OtherPic}" title="{keyicms:CaseName}"><img src="{OtherPic:OtherPic}" style="height:100px;" title="{keyicms:CaseName}" alt="{keyicms:CaseName}"></a>
+                                	{/keyicms:OtherPic}                                
+                                </li>
+                            </div>
+                        </div>
+                        <div class="artCont">{keyicms:Content}</div>
+					
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+			<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">案例分类</div>
+                </div>
+                <div class="cont">
+                    <ul class="sort">
+                    {keyicms:Sort SortType=Case}
+                    <li><a href="{Sort:Link}">{Sort:SortName}</a></li>	
+                        {keyicms:Sort1 ParentID={Sort:ID}}
+                        <li class="sort2"><a href="{Sort1:Link}">-- {Sort1:SortName}</a></li>	
+                        {/keyicms:Sort1}
+                    {/keyicms:Sort}
+                    </ul>
+                </div>
+            </div>
+            {keyicms:Include File=news_Left.html}
+        </div>
+    </div>
+</div>
+
+{keyicms:Include File=End.html}
+</body>
+</html>

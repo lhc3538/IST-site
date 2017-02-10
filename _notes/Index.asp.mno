@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_NewsDataShow" value="name:ID;datatype:Long,name:AddTime;datatype:DateTime,name:NewsName;datatype:VarChar,name:SortID;datatype:Long,name:ViewFlag;datatype:Bit" />
+	<infoitem key="UD_NoticeShow" value="name:AddTime;datatype:DateTime,name:ID;datatype:Long,name:NewsName;datatype:VarChar,name:SortID;datatype:Long" />
+	<infoitem key="UD_StudentShow" value="name:AddTime;datatype:DateTime,name:ID;datatype:Long,name:NewsName;datatype:VarChar,name:SortID;datatype:Long" />
+	<infoitem key="UD_DownloadShow" value="name:AddTime;datatype:DateTime,name:DownName;datatype:VarChar,name:ID;datatype:Long" />
+	<infoitem key="UD_ShowPicture" value="name:ID;datatype:Long,name:ProductName;datatype:VarChar,name:SmallPic;datatype:VarChar" />
+	<infoitem key="UD_ShowSlide" value="name:Pic;datatype:VarChar,name:SlideName;datatype:VarChar,name:State;datatype:Long,name:Url;datatype:VarChar" />
+	<infoitem key="UD_ShowNavFa" value="name:HtmlNavUrl;datatype:VarChar,name:NavName;datatype:VarChar,name:OutUrl;datatype:VarChar" />
+	<infoitem key="UD_ShowVavChild" value="name:HtmlNavUrl;datatype:VarChar,name:NavName;datatype:VarChar,name:OutUrl;datatype:VarChar,name:ViewFlag;datatype:Bit" />
+	<infoitem key="UD_ShowContact" value="name:Phone;datatype:VarChar,name:QQ;datatype:VarChar,name:User;datatype:VarChar,name:WeChat;datatype:VarChar" />
+	<infoitem key="UD_ShowSite" value="name:ID;datatype:Long,name:SiteTitle;datatype:VarChar,name:SiteUrl;datatype:VarChar,name:Keywords;datatype:VarChar,name:Descriptions;datatype:VarChar,name:IcpNumber;datatype:VarChar,name:SiteLogo;datatype:VarChar,name:Stats;datatype:VarChar,name:SiteDetail;datatype:VarChar,name:ComName;datatype:VarChar,name:Address;datatype:VarChar,name:Telephone;datatype:VarChar,name:Fax;datatype:VarChar,name:Email;datatype:VarChar,name:Mobile;datatype:VarChar,name:Contacts;datatype:VarChar,name:Ico;datatype:VarChar,name:SiteStatus;datatype:Bit,name:Explain;datatype:VarChar" />
+	<infoitem key="UD_ShowFriendLink" value="name:LinkFace;datatype:VarChar,name:LinkName;datatype:VarChar,name:LinkType;datatype:Bit,name:LinkUrl;datatype:VarChar,name:ViewFlag;datatype:Bit" />
+	<infoitem key="UD_ShowExp" value="name:CaseName;datatype:VarChar,name:Content;datatype:VarChar,name:SortID;datatype:Long,name:ViewFlag;datatype:Bit" />
+</info>

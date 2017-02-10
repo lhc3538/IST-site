@@ -1,0 +1,73 @@
+<div class="main_div1">
+    <div class="top">
+        <div class="header">
+            <img src="{keyicms:SiteLogo}" class="logo"/>
+            <div class="head">
+            <div class="headTxt">
+                <a href="#">设为主页</a>
+                <a href="#">加入收藏</a>
+            </div>
+            <form name="searchForm" method="post" onsubmit="return CheckForm()" action="JavaScript:void(0)" class="search">
+                <input type="text" name="key" id="key" value="" />
+                <input type="submit" name="button" id="button" value="" />
+            </form>
+            </div>
+            <script>
+            function CheckForm(){
+                if (document.searchForm.key.value=='')
+                {
+                    alert('搜索内容不能为空');
+                    return false
+                }
+                else
+                {
+                    window.location.href = '/Search/Index.Asp?key='+document.searchForm.key.value
+                }
+            }
+            </script>
+        </div>
+    </div>
+    <div class="gridNav">
+        <div class="nav">
+            <ul class="ulBox" id="ulBox">
+            	{keyicms:Navigation NavType=1}
+                <li><a href="{Navigation:Link}">{Navigation:NavName}</a>
+                	[If:{Navigation:SubCount}>0]
+                    <ul>
+                	{keyicms:Navigation1 ParentID={Navigation:ID}}
+                    <li><a href="{Navigation1:Link}">{Navigation1:NavName}</a></li>
+                    {/keyicms:Navigation1}
+                    </ul>
+                    [End If]
+                </li>
+                {/keyicms:Navigation}
+				<script type="text/javascript" language="javascript">
+                var nav = document.getElementById("ulBox");
+                var links = nav.getElementsByTagName("li");
+                var lilen = nav.getElementsByTagName("a"); //判断地址
+                var currenturl = document.location.href;
+                var last = 0;
+                for (var i = 0;i < links.length;i++)
+                {
+                	var linkurl =  lilen[i].getAttribute("href");
+					if(currenturl.indexOf(linkurl) != -1) {last = i;}
+                }
+				links[last].className = "current";  //高亮代码样式
+				if($(links[last]).length>0) $(links[last]).parent().parent("li").addClass("current")
+                </script>
+            </ul>
+            <div class="scrollObj"></div>
+        </div>
+    </div>
+    
+    <div class="slide-bg banner">
+        <div class="slide-wp">
+            <div id="slides" class="slides">
+                {keyicms:Slide}
+                <div><a class="a-jd opa js-log-login" href="{Slide:Url}" title="{Slide:SlideName}"><img class="slideImg" src="{Slide:Pic}" alt="{Slide:SlideName}"></a></div>
+                {/keyicms:Slide}
+            </div>
+        </div>
+    </div>
+
+</div>

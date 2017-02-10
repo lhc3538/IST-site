@@ -1,0 +1,364 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>联系我们 - 手机建站系统_企业网站管理系统_企业网站模板_WAP移动网站-KEYICMS</title>
+<meta name="keywords" content="企业网站管理系统,企业建站系统,企业网站模板,手机网站建设,手机网站建设" />
+<meta name="description" content="科蚁企业网站内容管理系统（以下简称KEYICMS）是科蚁网团队根据多年企业建站经验，并结合移动互联网发展趋势开发的一套免费开源企业网站内容管理系统。" />
+<link href="/Template/PC/Default/css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Template/PC/Default/js/jquery-1-7-2.js"></script>
+<script type="text/javascript" src="/Template/PC/Default/js/navScroll.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".nav > ul > li").ScrollNav({
+		scrollObj:".nav > .scrollObj",
+		speed:"fast"
+	});
+});
+</script>
+<script src="/Template/PC/Default/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+<div class="main_div1">
+    <div class="top">
+        <div class="header">
+            <img src="/uploadfile/image/logo.png" class="logo"/>
+            <div class="head">
+            <div class="headTxt">
+                <a href="#">设为主页</a>
+                <a href="#">加入收藏</a>
+            </div>
+            <form name="searchForm" method="post" onsubmit="return CheckForm()" action="JavaScript:void(0)" class="search">
+                <input type="text" name="key" id="key" value="" />
+                <input type="submit" name="button" id="button" value="" />
+            </form>
+            </div>
+            <script>
+            function CheckForm(){
+                if (document.searchForm.key.value=='')
+                {
+                    alert('搜索内容不能为空');
+                    return false
+                }
+                else
+                {
+                    window.location.href = '/Search/Index.Asp?key='+document.searchForm.key.value
+                }
+            }
+            </script>
+        </div>
+    </div>
+    <div class="gridNav">
+        <div class="nav">
+            <ul class="ulBox" id="ulBox">
+            	
+                <li><a href="/">首页</a>
+                	
+                </li>
+                
+                <li><a href="/About">关于我们</a>
+                	
+                    <ul>
+                	
+                    <li><a href="/About/201400151947-2.html">科蚁文化</a></li>
+                    
+                    <li><a href="/About/201400151948-3.html">科蚁团队</a></li>
+                    
+                    <li><a href="/About/201400151946-1.html">科蚁简介</a></li>
+                    
+                    </ul>
+                    
+                </li>
+                
+                <li><a href="/News">新闻中心</a>
+                	
+                    <ul>
+                	
+                    <li><a href="/News/HangYe">行业新闻</a></li>
+                    
+                    <li><a href="/News/GongSi">公司新闻</a></li>
+                    
+                    </ul>
+                    
+                </li>
+                
+                <li><a href="/Product">产品展示</a>
+                	
+                </li>
+                
+                <li><a href="/Case">成功案例</a>
+                	
+                </li>
+                
+                <li><a href="/Job">人才招聘</a>
+                	
+                </li>
+                
+                <li><a href="/Download">资源下载</a>
+                	
+                </li>
+                
+                <li><a href="/Contact">联系我们</a>
+                	
+                </li>
+                
+				<script type="text/javascript" language="javascript">
+                var nav = document.getElementById("ulBox");
+                var links = nav.getElementsByTagName("li");
+                var lilen = nav.getElementsByTagName("a"); //判断地址
+                var currenturl = document.location.href;
+                var last = 0;
+                for (var i = 0;i < links.length;i++)
+                {
+                	var linkurl =  lilen[i].getAttribute("href");
+					if(currenturl.indexOf(linkurl) != -1) {last = i;}
+                }
+				links[last].className = "current";  //高亮代码样式
+				if($(links[last]).length>0) $(links[last]).parent().parent("li").addClass("current")
+                </script>
+            </ul>
+            <div class="scrollObj"></div>
+        </div>
+    </div>
+    
+    <div class="slide-bg banner">
+        <div class="slide-wp">
+            <div id="slides" class="slides">
+                
+                <div><a class="a-jd opa js-log-login" href="#" title="科蚁003"><img class="slideImg" src="/uploadfile/image/20141126/001.jpg" alt="科蚁003"></a></div>
+                
+                <div><a class="a-jd opa js-log-login" href="#" title="科蚁002"><img class="slideImg" src="/uploadfile/image/20141126/002.jpg" alt="科蚁002"></a></div>
+                
+                <div><a class="a-jd opa js-log-login" href="#" title="科蚁001"><img class="slideImg" src="/uploadfile/image/20141126/003.jpg" alt="科蚁001"></a></div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="main_div3">
+    <div class="main">
+        <div class="left">
+            <div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">联系我们</div>
+                </div>
+                <div class="cont">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+                <tr>
+                <td width="216" valign="top" style="background:url(/Template/PC/Default/image/bg-line.gif) repeat-y right top;"><img src="/Template/PC/Default/image/us.jpg" width="200" height="260" /></td>
+                <td valign="top" style="padding-left:16px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><table width="100%" height="257" border="1" cellpadding="8" cellspacing="0" bordercolor="#EDEDED" style="border-collapse:collapse">
+                          <tr>
+                            <td bgcolor="#EDEDED" style="font-weight: bold; color: #EC0000" align="center">科蚁网团队</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;联 系 人：mlgb</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;联系电话：028-88888888</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;联系手机：135 8888 8888</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;传真号码：028-88888888</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;公司邮箱：admin@ke01.com</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;&nbsp;&nbsp;公司地址：成都市高新区xx路xx号2栋118号</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                </table>
+                
+                <div style="width:auto; height:330px; border:#ccc solid 1px; margin:8px 0 0px;" id="allmap"></div>
+                
+				<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=A81145b191c68e5055d735777fa746b8"></script>
+                <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+                <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+				<script type="text/javascript">
+                    var map = new BMap.Map('allmap');
+                    var poi = new BMap.Point(114.03514,30.541474);
+                    map.centerAndZoom(poi, 17);
+                    map.enableScrollWheelZoom();
+                
+					var content = '<img src="/uploadfile/image/logoM.png" style="height:100px; margin-left:5px; float:right;"/>' +
+						   '<div style="line-height:20px;">' +
+						   '联 系 人：科蚁网<br/>' +
+						   '联系电话：028-88888888<br/>' + 
+						   '联系手机：135 8888 8888<br/>' + 
+						   '联系地址：成都市高新区xx路xx号2栋118号<br/>' + 
+						   '</div>'
+
+                    var searchInfoWindow = null;
+                    searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+                            title  : "科蚁网团队",
+                            width  : 290,
+                            panel  : "panel",
+                            enableAutoPan : true,
+                            searchTypes   :[
+                                BMAPLIB_TAB_SEARCH,
+                                BMAPLIB_TAB_TO_HERE,
+                                BMAPLIB_TAB_FROM_HERE
+                            ]
+                        });
+                    var marker = new BMap.Marker(poi);
+                    marker.enableDragging();
+                    marker.addEventListener("click", function(e){
+                        searchInfoWindow.open(marker);
+                    })
+                    map.addOverlay(marker);
+                </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+			<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">关于我们</div>
+                </div>
+                <ul class="sort">
+				
+                <li><a href="/About/201400151946-1.html">科蚁简介</a></li>
+				
+                <li><a href="/About/201400151948-3.html">test科蚁团队</a></li>
+				
+                <li><a href="/About/201400151947-2.html">科蚁文化</a></li>
+				
+                <li><a href="/About/123-4.html">123</a></li>
+				
+                </ul>
+            </div>
+                        <div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">行业新闻</div>
+                </div>
+                <div class="cont">
+                    <ul class="list">
+                    
+                    <li><a href='/News/20141129110439-13.html' title='test可穿戴设备还有多远路要走？'>test可穿戴设备还有多远路要走？</a></li>
+                    
+                    <li><a href='/News/20141128021523-1.html' title='智能空气净化器 诞生下一个Nest'>智能空气净化器&nbsp;诞生下一个Nest</a></li>
+                    
+                    <li><a href='/News/20141128024452-9.html' title='123智能家居更多的还是“伪智能” 不算是智能硬件'>123智能家居更多的还是“伪智能”&nbsp;不算....</a></li>
+                    
+                    <li><a href='/News/20141128024212-8.html' title='明基推智能投影仪 YunOS系统家用机抢眼'>明基推智能投影仪&nbsp;YunOS系统家用机抢眼....</a></li>
+                    
+                    <li><a href='/News/20141128023840-7.html' title='Pebble 15年推新款智能手表 将模块化定制'>Pebble&nbsp;15年推新款智能手表&nbsp;将模块化定....</a></li>
+                    
+                    <li><a href='/News/20141128023635-6.html' title='英特尔首款智能手环MICA 定价$495'>英特尔首款智能手环MICA&nbsp;定价$495</a></li>
+                    
+                    <li><a href='/News/20141128023415-5.html' title='百度智能自行车DuBike最快将于年底推出'>百度智能自行车DuBike最快将于年底推出....</a></li>
+                    
+                    <li><a href='/News/20141128022828-4.html' title='看苹果手表如何秒杀Android Wear？'>看苹果手表如何秒杀Android&nbsp;Wear？</a></li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+	<div class="foot">
+    	<img src="/Template/PC/Default/image/qrcode.jpg" height="125" />
+        <p>
+        	
+            <a href="/Message">网站留言</a> |
+            
+            <a href="/News/ZhiNeng">智能设备</a> |
+            
+            <a href="/News/JieNengHuanBao">节能环保</a> |
+            
+            <a href="http://www.ke01.com/">科蚁网</a> |
+            
+        </p>
+        <p>Copyright © 2014-2015 科蚁网团队 All rights reserved</p>
+        <p>网站备案号：蜀ICP备12029091号</p>
+        <p>联系方式：135 8888 8888（科蚁网）公司地址：成都市高新区xx路xx号2栋118号</p>
+        <p>Powered by <a href="http://www.keyicms.com" target="_blank">KeyiCMS</a> V1.06 RC © 2014-2015 ShenBiTianCheng Inc.</p>
+    </div>
+</div>
+
+<!--在线客服代码-->
+<link href="/Template/PC/Default/File/Online/online.css" rel="stylesheet" type="text/css" />
+<script src="/Template/PC/Default/File/Online/online.js"></script>
+
+<div id="online_qq_layer">
+	<div id="online_qq_tab">
+		<div class="online_icon">
+			<a title id="floatShow" style=" display:block;" href="javascript:void(0);">&nbsp;</a>
+			<a title id="floatHide" style=" display:none;" href="javascript:void(0);">&nbsp;</a>
+		</div>
+	</div>
+	<div id="onlineService">
+		<div class="online_windows overz">
+			<div class="online_w_top"></div>
+			<div class="online_w_c overz">
+                <img src="/Template/PC/Default/image/qrcode.jpg" />
+            	
+				<div class="online_bar collapse">
+					<h2><a href="JavaScript:void(0)">科蚁_杜</a></h2>
+					<div class="online_content overz">
+						<ul class="overz">
+                        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=89852118&site=qq&menu=yes" class="qq_icon">QQ交谈</a></li>
+                        <li>电话：13500000000</li>
+                        <li>微信号：ke01_4869</li>
+						</ul>
+					</div>
+				</div>
+                
+				<div class="online_bar collapse">
+					<h2><a href="JavaScript:void(0)">科蚁网咨询</a></h2>
+					<div class="online_content overz">
+						<ul class="overz">
+                        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1234567890&site=qq&menu=yes" class="qq_icon">QQ交谈</a></li>
+                        <li>电话：18780000000</li>
+                        <li>微信号：shenbi9527</li>
+						</ul>
+					</div>
+				</div>
+                
+            </div>
+            <div class="online_w_bottom"></div>
+        </div>
+    </div>
+</div>
+<!--在线客服代码END-->
+
+<link href="/Template/PC/Default/File/360/css.css" rel="stylesheet" type="text/css" />
+<script src="/Template/PC/Default/File/360/jquery.slides.min.js"></script> 
+<script>
+$(function() {
+	$('#slides').slidesjs({
+		play:{
+			active: false,
+			effect: "fade",
+			auto: true,
+			interval: 4000
+		},
+		effect: {
+			fade: {
+			speed: 1500,
+			crossfade: true
+			}
+		},
+		pagination: {
+			active: true
+		},
+		navigation:{
+			active: false
+		}
+	});
+});
+</script>
+</body>
+</html>

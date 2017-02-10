@@ -1,0 +1,6 @@
+.slide-wp{width:1920px;height:300px;position: relative;left:50%;margin-left:-952px;z-index: 1;}
+.slides, .slide-bg{height: 300px;background-color: #fff;overflow: hidden;}
+.slidesjs-pagination{position: absolute;bottom: 15px; left: 50%; z-index: 11;margin-left: -52px;}
+.slidesjs-pagination li{float: left;margin-right: 10px;}
+.slidesjs-pagination li a{text-indent: -9999px;background-color: #333;display: inline-block; *display:block;_display: block;width: 25px;height: 7px;padding: 0;_height: 2px;_line-height: 1;}
+.slidesjs-pagination li a.active{background-color: #fff;}.slideImg{position: absolute;top: 0;left: 0;z-index: 9;}

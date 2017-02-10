@@ -1,0 +1,11 @@
+                    <div class="Page">
+                    {keyicms:Page}
+                        {Page:First}首页{/Page:First}
+                        {Page:Prev}上一页{/Page:Prev}
+                        {Page:PageList PageCur=selected}
+                        <a href="{PageList:Link}" Class="{PageList:PageCur}">{PageList:PageInfo}</a>
+                        {/Page:PageList}
+                        {Page:Next}下一页{/Page:Next}
+                        {Page:Last}末页{/Page:Last}
+                    {/keyicms:Page}
+                    </div>

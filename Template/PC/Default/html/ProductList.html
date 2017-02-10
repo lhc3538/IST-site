@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{keyicms:SeoTitle} - {keyicms:SiteTitle}</title>
+<meta name="keywords" content="{keyicms:SeoKeywords}" />
+<meta name="description" content="{keyicms:SeoDescription}" />
+{keyicms:Include File=Css.html}
+{keyicms:Include File=JavaScript.html}
+</head>
+
+<body>
+{keyicms:Include File=Top.html}
+<div class="main_div3">
+	<div class="main">
+    	<div class="left">
+        	<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">{keyicms:SeoTitle}</div>
+                </div>
+                <div class="cont">
+                    <ul class='xmzs'>
+                    	{keyicms:ProductList Num=12 PageFlag=True Order=Sequence}
+                    	<li><a href="{ProductList:Link}" class="img"><img src="{ProductList:SmallPic}" /></a><a href="{ProductList:Link}" class="txt">{ProductList:ProductName Len=26}</a></li>
+                        {/keyicms:ProductList}
+					</ul>
+                    {keyicms:Include File=Page.html}
+                </div>
+            </div>
+        </div>
+        <div class="right">
+			<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">产品分类</div>
+                </div>
+                <div class="cont">
+                    <ul class="sort">
+                    {keyicms:Sort SortType=Product}
+                    <li><a href="{Sort:Link}">{Sort:SortName}</a></li>	
+                        {keyicms:Sort1 ParentID={Sort:ID}}
+                        <li class="sort2"><a href="{Sort1:Link}">-- {Sort1:SortName}</a></li>	
+                        {/keyicms:Sort1}
+                    {/keyicms:Sort}
+                    </ul>
+                </div>
+            </div>
+			<div class="box">
+            {keyicms:Include File=news_Left.html}
+            </div>
+        </div>
+    </div>
+</div>
+
+{keyicms:Include File=End.html}
+</body>
+</html>

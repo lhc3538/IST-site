@@ -1,0 +1,12 @@
+            <div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">行业新闻</div>
+                </div>
+                <div class="cont">
+                    <ul class="list">
+                    {keyicms:NewsList SortPath=2 Order=AddTime Num=8}
+                    <li><a href='{NewsList:Link}' title='{NewsList:NewsName}'>{NewsList:NewsName Len=36}</a></li>
+                    {/keyicms:NewsList}
+                    </ul>
+                </div>
+            </div>

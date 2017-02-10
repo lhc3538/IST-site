@@ -1,0 +1,115 @@
+html{font-size:100%; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;}
+body{ width:100%; height:100%; background:#1fb3a3 url("../img/login-background.jpg") no-repeat center fixed;
+	-webkit-background-size:cover;
+	   -moz-background-size:cover;
+		 -o-background-size:cover;
+			background-size:cover;
+}
+ul, ol, li{ margin:0px; padding:0px; list-style:none;}
+
+.logo{ width:100%; text-align:center; color:#FFFFFF; margin:12% auto 4%; overflow:hidden;}
+.logo h4{ font-family:'MicroSoft YaHei', sans-serif; font-size:30px; }
+.lock-holder .dot{ margin-top:8px; font-size:17px; color:#FFFFFF; display:block; text-align:center;}
+.lock-holder .dot-left{ position:absolute; margin-left:20px; margin-top:18px; font-size:17px; color:#FFFFFF;}
+.lock-holder .dot-right{ position:absolute; margin-left:165px; margin-top:18px; font-size:17px; color:#FFFFFF;}
+.lock-holder{ width:700px; margin:0 auto;}
+.lock-holder .lock-group{ overflow:hidden;}
+.lock-holder .form-group{ width:250px;}
+.lock-div{ min-height:100px;}
+
+.avatar{ text-align:center; height:0;}
+.avatar img{ width:100px; border:2px solid #FFFFFF; border-radius:50%;
+	-webkit-transition:300ms ease;
+	   -moz-transition:300ms ease;
+	     -o-transition:300ms ease;
+	  	    transition:300ms ease;
+}
+
+.lock-holder .form-control{ display:block; height:34px; padding:6px 12px; font-size:14px; line-height:1.428571429; color:#555555; vertical-align:middle; background-color:#ffffff; background-image:none; border:1px solid #cccccc; border-radius:4px;
+  -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.code span{ padding:0;}
+.code img{ border-radius:0 4px 4px 0; width:100px; height:32px;}
+.pull{ margin:8px auto;}
+.submit{ margin-top:2%; text-align:center;}
+.submit .fa-spinner{ font-size:20px; color:white;}
+.submit .progress{ width:200px; margin:0px auto;}
+.submit .btn{ background:#39afea; border-color:#39afea; border:1px solid #67c2ef; padding:10px 35px; font-family:'MicroSoft YaHei', sans-serif; font-size:14px; font-weight:400;
+	-webkit-box-shadow:inset 0 0 1px 1px rgba(255,255,255,0.35),0 2px 1px -1px rgba(0,0,0,0.2);
+	   -moz-box-shadow:inset 0 0 1px 1px rgba(255,255,255,0.35),0 2px 1px -1px rgba(0,0,0,0.2);
+	        box-shadow:inset 0 0 1px 1px rgba(255,255,255,0.35),0 2px 1px -1px rgba(0,0,0,0.2);
+}
+.submit .btn:hover{ color:#fff; background-color:#31b0d5; border-color:#269abc; text-decoration:none;}
+.lock-holder .input-group-addon{ background-color:#ffffff;}
+.lock-holder .input-group-addon i{ color:#cfcfcf;}
+
+.layerDiv{ width:730px; height:340px; background:#FFF; margin:-170px 0px 0px -365px; padding:0px; border:2px solid #808080; border-image:none; left:50%; top:50%; display:none; z-index:2147483647;
+	_position:absolute;
+	 position:fixed;
+	-webkit-border-radius:8px;
+	 -khtml-border-radius:8px;
+	   -moz-border-radius:8px;
+			border-radius:8px;}
+.layerDiv h2{ margin:30px 25px 10px; color:#000; line-height:1.2em; clear:both; font-size:24px;}
+.layerDiv h3{ margin:20px 25px; color:#333; clear:both; font-size:16px;}
+.layerDiv div span{ color:#666666; font-size:12px; float:right;}
+.layerDiv div span a{ color:#369;}
+.layerDiv ul{ margin:20px auto 0px; width:540px; height:100px; clear:both; _width:580px;}
+.layerDiv p{ margin:0px 25px; padding-top:15px; border-top-color:#ccc; border-top-width:1px; border-top-style:dotted; position:relative;}
+.layerDiv ul li{ margin:0px 15px; width:105px; height:80px; text-align:center; float:left;}
+.layerDiv ul li a { height:80px; clear:both; display:block;}
+.layerDiv p a{ height:32px; color:#666; line-height:32px; font-size:16px;}
+.layerDiv div{ margin:0px 25px; color:#333; padding-top:20px; clear:both; font-size:14px; border-top-color:#ccc; border-top-width:1px; border-top-style:dotted;}
+.ico{ background:url(../img/icon.png) no-repeat 0px 0px;}
+.icoChrome { background-position:0px 0; width:105px; height:80px; margin-right:20px; display:inline-block;}
+.icoOpera { background-position:-115px 0; width:73px; height:80px; margin-right:20px; display:inline-block;}
+.icoFirefox{ background-position:-197px 0; width:61px; height:80px; margin-right:20px; display:inline-block;}
+.icoSafar{ background-position:-267px 0; width:69px; height:80px; display:inline-block;}
+.icoGt{ background-position:-348px -48px; height:32px; text-indent:40px; display:inline-block;}
+.mask_div{ background:#fff; left:0px; top:0px; width:100%; height:100%; display:none; position:absolute; z-index:9999; opacity:0.3; -moz-opacity:0.3; -khtml-opacity:0.3;}
+
+
+@media (max-width:900px)
+{
+.logo{ width:100%; position:relative; text-align:center; margin-top:10%; margin-bottom:0px !important; color:#FFFFFF;}
+.logo h4{ font-family:'MicroSoft YaHei', sans-serif; font-size:20px; }
+.lock-holder{ width:240px !important; margin-top:0px; margin-bottom:0px;}
+.dot-left,.dot-right,.dot{ display:none !important; }
+.lock-holder .form-group{ width:240px;}
+.avatar{ display:none;}
+.avatar img{ width:50px; border:2px solid #FFFFFF; border-radius:50%; margin-left:45%;}
+.submit{ text-align:center;}
+}
+.avatar-top img{ margin-top:-40px;
+	-webkit-transition:800ms ease;
+	   -moz-transition:800ms ease;
+	     -o-transition:800ms ease;
+	 	    transition:800ms ease;
+}
+
+/* Progress bar Custom styles
+---------------------------------------------------------------------------------------------- */
+.progress { height:8px; margin-bottom:20px; overflow:hidden; background-color:#000000; border-radius:5px;
+	-webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	    box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar{ float:left; width:0; height:100%; font-size:12px; line-height:20px; color:#ffffff; text-align:center; background-color:@primary; border-radius:3px;
+	-webkit-box-shadow:inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	        box-shadow:inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-webkit-transition:width 0.6s ease;
+	        transition:width 0.6s ease;
+}
+
+.progress-bar-success{ background-color:@success;}
+.progress-bar-info{ background-color:@info;}
+.progress-bar-warning{ background-color:@warning;}
+.progress-bar-danger{ background-color:@danger;}
+
+@media (max-width:500px)
+{
+body{ background:#23bab5;}
+}

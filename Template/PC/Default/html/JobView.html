@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{keyicms:SeoTitle} - {keyicms:SiteTitle}</title>
+<meta name="keywords" content="{keyicms:SeoKeywords}" />
+<meta name="description" content="{keyicms:SeoDescription}" />
+{keyicms:Include File=Css.html}
+{keyicms:Include File=JavaScript.html}
+</head>
+
+<body>
+{keyicms:Include File=Top.html}
+<div class="main_div3">
+	<div class="main">
+    	<div class="left">
+        	<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">{keyicms:SeoTitle}</div>
+                </div>
+                <div class="cont">
+                	<div class="article">
+                        <div class='artName'>{keyicms:JobName}</div>
+                        <div class='artInfo'>
+                            发布时间：{keyicms:AddTime Format=14}&nbsp;&nbsp;
+                            浏览次数：<script language="javascript" src="/Asp/Number.Asp?id={keyicms:ID}&LX=Keyicms_Job"></script>
+									 <script language="javascript" src="/Asp/Number.Asp?id={keyicms:ID}&action=count&LX=Keyicms_Job"></script>
+                        </div>
+                        <div class='artCont'>
+                            <table class="recruit">
+                            <tr>
+                                <td><strong>招聘人数：</strong>{keyicms:JobNumber}人</td>
+                                <td><strong>薪水待遇：</strong>{keyicms:Emolument}</td>
+                            </tr>
+                            <tr>
+                                <td width="50%"><strong>工作地址：</strong>{keyicms:JobAddress}</td>
+                                <td width="50%"><strong>有效时间：</strong>{keyicms:StartDate} - {keyicms:EndDate}</td>
+                            </tr>
+                            </table>
+                            <div class="recruit">
+                                {keyicms:Requirement}
+                                <div class="sm"><span>* 请有意向者，发送简历到邮箱（{keyicms:Email}），我们在尽快回复您。</span></div>
+                            </div>
+                            
+                        </div>
+                	</div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+			<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">关于我们</div>
+                </div>
+                <div class="cont">
+                    <ul class="sort">
+                    {keyicms:Sort SortType=About}
+                    <li><a href="{Sort:Link}">{Sort:SortName}</a></li>	
+                    {/keyicms:Sort}
+                    </ul>
+                </div>
+            </div>
+            {keyicms:Include File=news_Left.html}
+        </div>
+    </div>
+</div>
+
+{keyicms:Include File=End.html}
+</body>
+</html>

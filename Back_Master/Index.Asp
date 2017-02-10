@@ -1,0 +1,1 @@
+﻿<%response.redirect "Keyicms_Index.Asp"%>

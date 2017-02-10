@@ -1,0 +1,76 @@
+﻿<div class="footer">
+	<div class="foot">
+    	<img src="{keyicms:TemplatePath}/image/qrcode.jpg" height="125" />
+        <p>
+        	{keyicms:Navigation NavType=2}
+            <a href="{Navigation:Link}">{Navigation:NavName}</a> |
+            {/keyicms:Navigation}
+        </p>
+        <p>Copyright © 2014-2015 {keyicms:ComName} All rights reserved</p>
+        <p>网站备案号：{keyicms:IcpNumber}</p>
+        <p>联系方式：{keyicms:Mobile}（{keyicms:Contacts}）公司地址：{keyicms:Address}</p>
+        <p>Powered by <a href="http://www.keyicms.com" target="_blank">KeyiCMS</a> {keyicms:KeyicmsV} © 2014-2015 ShenBiTianCheng Inc.</p>
+    </div>
+</div>
+
+<!--在线客服代码-->
+<link href="{keyicms:TemplatePath}/File/Online/online.css" rel="stylesheet" type="text/css" />
+<script src="{keyicms:TemplatePath}/File/Online/online.js"></script>
+
+<div id="online_qq_layer">
+	<div id="online_qq_tab">
+		<div class="online_icon">
+			<a title id="floatShow" style=" display:block;" href="javascript:void(0);">&nbsp;</a>
+			<a title id="floatHide" style=" display:none;" href="javascript:void(0);">&nbsp;</a>
+		</div>
+	</div>
+	<div id="onlineService">
+		<div class="online_windows overz">
+			<div class="online_w_top"></div>
+			<div class="online_w_c overz">
+                <img src="{keyicms:TemplatePath}/image/qrcode.jpg" />
+            	{keyicms:Contact Status=1}
+				<div class="online_bar collapse">
+					<h2><a href="JavaScript:void(0)">{Contact:User}</a></h2>
+					<div class="online_content overz">
+						<ul class="overz">
+                        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={Contact:Qq}&site=qq&menu=yes" class="qq_icon">QQ交谈</a></li>
+                        <li>电话：{Contact:Phone}</li>
+                        <li>微信号：{Contact:WeChat}</li>
+						</ul>
+					</div>
+				</div>
+                {/keyicms:Contact}
+            </div>
+            <div class="online_w_bottom"></div>
+        </div>
+    </div>
+</div>
+<!--在线客服代码END-->
+
+<link href="{keyicms:TemplatePath}/File/360/css.css" rel="stylesheet" type="text/css" />
+<script src="{keyicms:TemplatePath}/File/360/jquery.slides.min.js"></script> 
+<script>
+$(function() {
+	$('#slides').slidesjs({
+		play:{
+			active: false,
+			effect: "fade",
+			auto: true,
+			interval: 4000
+		},
+		effect: {
+			fade: {
+			speed: 1500,
+			crossfade: true
+			}
+		},
+		pagination: {
+			active: true
+		},
+		navigation:{
+			active: false
+		}
+	});
+});
+</script>

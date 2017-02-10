@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{keyicms:SeoTitle} - {keyicms:SiteTitle}</title>
+<meta name="keywords" content="{keyicms:SeoKeywords}" />
+<meta name="description" content="{keyicms:SeoDescription}" />
+{keyicms:Include File=Css.html}
+{keyicms:Include File=JavaScript.html}
+</head>
+
+<body>
+{keyicms:Include File=Top.html}
+<div class="main_div3">
+	<div class="main">
+    	<div class="left">
+        	<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">{keyicms:SeoTitle}</div>
+                </div>
+                <div class="cont">
+					<div class='article'>
+                        <ul class='list'>
+                            {keyicms:JobList Num=8 PageFlag=True}
+                            <li><a href="{JobList:Link}" title="{JobList:JobName}">{JobList:JobName}</a> <span>[{JobList:AddTime}]</span></li>
+                            {/keyicms:JobList}
+                        </ul>
+                    </div>
+                     {keyicms:Include File=Page.html}
+                </div>
+            </div>
+        </div>
+        <div class="right">
+			<div class="box">
+            	<div class="bar">
+                	<div class="tit tit03">关于我们</div>
+                </div>
+                <ul class="sort">
+				{keyicms:Sort SortType=About}
+                <li><a href="{Sort:Link}">{Sort:SortName}</a></li>
+				{/keyicms:Sort}
+                </ul>
+            </div>
+            {keyicms:Include File=news_Left.html}
+        </div>
+    </div>
+</div>
+
+{keyicms:Include File=End.html}
+</body>
+</html>

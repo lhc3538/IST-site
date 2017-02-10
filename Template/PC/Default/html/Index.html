@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{keyicms:SiteTitle}</title>
+<meta name="keywords" content="{keyicms:Keywords}" />
+<meta name="description" content="{keyicms:Descriptions}" />
+{keyicms:Include File=Css.html}
+{keyicms:Include File=JavaScript.html}
+</head>
+
+<body>
+{keyicms:Include File=Top.html}
+<div class="main_div2">
+    <div class="chanpin">
+        <div class="cbar">
+            <img src="{keyicms:TemplatePath}/image/ProTitle.png" />
+            <a href="/Product/">more...</a>
+        </div>
+        <div class="Cp">
+            <div class="Button Prev"></div>
+            <div class="Button Next"></div>
+            <div class="CpBox">
+            	<ul>
+                {keyicms:ProductList Num=12 Order=Sequence}
+                <li>
+                	<a href="{ProductList:Link}" title="{ProductList:ProductName}"><img src="{ProductList:SmallPic}" alt="{ProductList:ProductName}"/></a>
+                    <p class="txt">{ProductList:ProductName Len=26}</p>
+                </li>
+                {/keyicms:ProductList}
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+	<div class="main">
+        <div class="box about">
+            <div class="bar">
+            	<div class="tit tit01">
+                    <h5>企业简介</h5>
+                    <span>COMPANY PROFILE</span>
+                </div>
+            </div>
+            <div class="cont">
+                <img src="{keyicms:TemplatePath}/image/about.jpg" style="float:left;"/>
+                {keyicms:SiteDetail}
+            </div>
+        </div>
+        
+        <div class="box news">
+            <div class="bar">
+            	<div class="tit tit01">
+                    <h5>企业新闻</h5>
+                    <span>INDUSRTY NEWS</span>
+                </div>
+            </div>
+            <div class="cont">
+            	<ul>
+                {keyicms:NewsList Num=5 PicFlag=True}
+                [If:{NewsList:i}=1]
+            	<li class="one">
+                	<a href="{NewsList:Link}">
+                        <img src="{NewsList:SmallPic}">
+                        <div class="tit">{NewsList:NewsName Len=32}</div>
+                        <div class="con">{NewsList:Text Len=60}</div>
+                    </a>
+                </li>
+                [Else]
+                <li><a href="{NewsList:Link}" title="{NewsList:NewsName}">{NewsList:NewsName Len=36}</a><span>{NewsList:AddTime Format=13}</span></li>
+                [End If]
+                {/keyicms:NewsList}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="box contact">
+            <div class="bar">
+            	<div class="tit tit01">
+                    <h5>联系我们</h5>
+                    <span>CONTACT</span>
+                </div>
+            </div>
+            <div class="cont">
+            	{keyicms:Ads ID=1}
+                <img src="{Ads:AdsPic}" title="{Ads:AdsName}" />
+                {/keyicms:Ads}
+                <p>联系人：{keyicms:Contacts}</p>
+                <p>联系电话：{keyicms:Telephone}</p>
+                <p>联系地址：{keyicms:Address}</p>
+            </div>
+        </div>
+    	<div class="clear"></div>
+
+        <div class="box case">
+            <div class="bar">
+                <div class="tit tit01">
+                    <h5>成功案例</h5>
+                    <span>SUCCESSFUL CASE</span>
+                </div>
+            </div>
+            <div class="cont">
+                <ul>
+                {keyicms:CaseList Num=8 Order=Sequence}
+                <li>
+                	<a href="{CaseList:Link}" title="{CaseList:CaseName}"><img src="{CaseList:SmallPic}" alt="{CaseList:CaseName}" /></a>
+                    <p class="txt">{CaseList:CaseName Len=32}</p>
+                </li>
+                {/keyicms:CaseList}
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="link">
+        <div class="bar">
+            <span>友情链接</span>
+        </div>
+        <div class="cont img">
+            {keyicms:FriendLink LinkType=-1}
+            <a href='{FriendLink:LinkUrl}' title="{FriendLink:LinkName}：{FriendLink:Remark}" target='_blank'><img src='{FriendLink:LinkFace}' /></a>
+            {/keyicms:FriendLink}
+        </div>
+        <div class="cont txt">
+            {keyicms:FriendLink LinkType=0}
+            <a href='{FriendLink:LinkUrl}' title="{FriendLink:LinkName}：{FriendLink:Remark}" target='_blank'>{FriendLink:LinkFace}</a>
+            {/keyicms:FriendLink}
+        </div>
+    </div>
+</div>
+
+{keyicms:Include File=End.html}
+<script>
+$(document).ready(function(e) {
+	www = 210
+	$('.Next').click(function(){
+		obj = $(this).siblings('.CpBox').find('ul')
+		linum = obj.find('li').length;
+		w = linum * www;
+		if($(obj).is(':animated')){
+			$(obj).stop(true,true);
+		}
+		if(linum > 5){
+			Prol = parseInt($(obj).css('left'));
+			
+			if(Prol != (w - (www * 5)) * -1){
+				$(obj).animate({left: Prol - www + 'px'},500);
+			}
+			else{//交换图片显示时
+				$(obj).animate({left: 0},500)
+			}
+		}
+	})
+
+	$('.Prev').click(function(){
+		obj = $(this).siblings('.CpBox').find('ul')
+		linum = obj.find('li').length;
+		w = linum * www;
+		if($(obj).is(':animated')){
+			$(obj).stop(true,true);
+		}
+		if(linum > 5){
+			Prol = parseInt($(obj).css('left'));
+			
+			if(Prol == 0){
+				$(obj).animate({left: (w - (www * 5)) * -1},500);
+			}
+			else{
+				$(obj).animate({left: Prol + www},500);				
+			}
+		}
+	})    
+
+	$(".CpBox li, .case ul li").hover(
+		function(){
+			$(this).children().stop(true,false);
+			$(this).children(".txt").animate({top:-35},250);	 
+		}, 
+		function() {
+			$(this).children(".txt").animate({top:0},250);	 
+		}
+	);
+});
+</script>
+</body>
+</html>

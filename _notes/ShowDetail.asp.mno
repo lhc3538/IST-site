@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ShowNavFa" value="name:HtmlNavUrl;datatype:VarChar,name:NavName;datatype:VarChar,name:OutUrl;datatype:VarChar,name:ViewFlag;datatype:Bit" />
+	<infoitem key="UD_ShowSort" value="name:ID;datatype:Long,name:SortName;datatype:VarChar,name:ViewFlag;datatype:Bit" />
+	<infoitem key="UD_ShowDetail" value="name:AddTime;datatype:DateTime,name:ClickNumber;datatype:Long,name:Content;datatype:VarChar,name:ID;datatype:Long,name:NewsName;datatype:VarChar,name:Origin;datatype:VarChar,name:SortID;datatype:Long,name:UpdateTime;datatype:DateTime,name:ViewFlag;datatype:Bit" />
+	<infoitem key="UD_ShowDisciplines" value="name:ID;datatype:Long,name:NewsName;datatype:VarChar,name:ViewFlag;datatype:Bit,name:SortID;datatype:Long,name:SortPath;datatype:VarChar,name:NoticeFlag;datatype:Bit,name:MobileFlag;datatype:Bit,name:Origin;datatype:VarChar,name:Content;datatype:VarChar,name:ClickNumber;datatype:Long,name:AddTime;datatype:DateTime,name:UpdateTime;datatype:DateTime,name:SeoKeywords;datatype:VarChar,name:SeoDescription;datatype:VarChar,name:Text;datatype:VarChar,name:bold;datatype:VarChar,name:color;datatype:VarChar,name:PicFlag;datatype:Bit,name:SmallPic;datatype:VarChar,name:ClassSeo;datatype:VarChar" />
+	<infoitem key="UD_ShowVavChild" value="name:HtmlNavUrl;datatype:VarChar,name:NavName;datatype:VarChar,name:OutUrl;datatype:VarChar,name:ViewFlag;datatype:Bit" />
+</info>
